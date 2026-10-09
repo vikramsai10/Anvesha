@@ -1,0 +1,27 @@
+export const documents = [
+  { id: 'doc-1', name: 'CS201_Dijkstra_Graph_Algorithms.pdf', type: 'PDF', subject: 'Algorithms & Data Structures', source: 'Dr. Meera Iyer', pages: 34, date: 'Sep 14, 2026', status: 'Indexed' },
+  { id: 'doc-2', name: 'Lecture_08_Backpropagation_Neural_Networks.txt', type: 'TXT', subject: 'Machine Learning', source: 'Prof. Nikhil Shah', pages: 14, date: 'Sep 14, 2026', status: 'Indexed' },
+  { id: 'doc-3', name: 'DBMS_Normalization_3NF.docx', type: 'DOCX', subject: 'Database Management Systems', source: 'Dr. Kavita Rao', pages: 22, date: 'Sep 15, 2026', status: 'Indexed' },
+  { id: 'doc-4', name: 'Computer_Networks_TCP_IP.pdf', type: 'PDF', subject: 'Computer Networks', source: 'Prof. Arjun Menon', pages: 28, date: 'Sep 15, 2026', status: 'Indexed' },
+  { id: 'doc-5', name: 'Operating_Systems_Process_Management.pdf', type: 'PDF', subject: 'Operating Systems', source: 'Dr. Sana Kapoor', pages: 31, date: 'Sep 16, 2026', status: 'Indexed' },
+];
+
+export const sources = {
+  dijkstra: { id: 'D1', document: 'CS201_Dijkstra_Graph_Algorithms.pdf', page: 642, section: 'Single-Source Shortest Paths', text: "Dijkstra's algorithm solves the single-source shortest-path problem for directed graphs with non-negative edge weights. It repeatedly chooses the unvisited vertex with the smallest tentative distance and relaxes its outgoing edges." },
+  dijkstraExample: { id: 'D2', document: 'Solved_Examples_Dijkstra.pdf', page: 2, section: 'Worked Example: Road Networks', text: 'At each step, the closest unsettled vertex is finalized. This greedy choice is valid because non-negative edges cannot produce a later shorter route to a finalized vertex.' },
+  backprop: { id: 'M1', document: 'Lecture_08_Backpropagation_Neural_Networks.txt', page: 8, section: 'Computing Gradients', text: 'Backpropagation applies the chain rule from the output layer toward the input layer. Each weight receives a gradient that describes how changing it would change the loss.' },
+  normal: { id: 'B1', document: 'DBMS_Normalization_3NF.docx', page: 11, section: 'Third Normal Form', text: 'A relation is in Third Normal Form when it is in Second Normal Form and no non-key attribute is transitively dependent on a candidate key.' },
+  network: { id: 'N1', document: 'Computer_Networks_TCP_IP.pdf', page: 19, section: 'Transport Protocols', text: 'TCP provides an ordered, reliable byte stream through connection establishment, acknowledgements, retransmission, and flow control. UDP sends independent datagrams without these delivery guarantees.' },
+  os: { id: 'O1', document: 'Operating_Systems_Process_Management.pdf', page: 16, section: 'CPU Scheduling', text: 'Process scheduling selects a ready process for CPU execution. The scheduler balances goals such as throughput, response time, fairness, and waiting time.' },
+};
+
+export const answers = {
+  dijkstra: { subject: 'Algorithms & Data Structures', question: "What is Dijkstra's algorithm?", answer: "Dijkstra's algorithm is a greedy shortest-path algorithm that finds the shortest paths from one starting vertex to every other vertex in a weighted graph, provided all edge weights are non-negative.", points: ['It solves a single-source shortest-path problem.', 'It repeatedly selects the unvisited vertex with the smallest tentative distance.', 'Negative edges break the greedy guarantee because a finalized path could later become shorter.'], sourceIds: ['dijkstra', 'dijkstraExample'] },
+  backprop: { subject: 'Machine Learning', question: 'How does backpropagation work?', answer: 'Backpropagation computes how much each model weight contributed to the prediction error, then propagates that information backward through the network using the chain rule.', points: ['A forward pass produces a prediction and loss.', 'The chain rule computes gradients layer by layer.', 'An optimizer uses those gradients to update weights.'], sourceIds: ['backprop'] },
+  normal: { subject: 'Database Management Systems', question: 'What are the rules for Third Normal Form?', answer: 'A table is in Third Normal Form when it already satisfies Second Normal Form and every non-key attribute depends directly on a candidate key, not on another non-key attribute.', points: ['The table must first be in 2NF.', 'There must be no transitive dependency.', 'Every non-key attribute depends on the key, the whole key, and nothing but the key.'], sourceIds: ['normal'] },
+  network: { subject: 'Computer Networks', question: 'What is the difference between TCP and UDP?', answer: 'TCP is connection-oriented and provides reliable, ordered delivery, while UDP is connectionless and prioritizes low overhead and speed over delivery guarantees.', points: ['TCP uses acknowledgements and retransmission.', 'UDP is useful for latency-sensitive traffic.', 'The application chooses based on reliability and latency needs.'], sourceIds: ['network'] },
+  os: { subject: 'Operating Systems', question: 'What is process scheduling?', answer: 'Process scheduling is the operating system activity of selecting which ready process should use the CPU next.', points: ['It coordinates access to the processor.', 'Schedulers balance fairness, throughput, and response time.', 'Different policies suit different workloads.'], sourceIds: ['os'] },
+};
+
+export const history = [answers.dijkstra, answers.backprop, answers.normal];
+export const suggested = [answers.dijkstra, answers.backprop, answers.normal];

@@ -1,0 +1,12 @@
+{
+  "name": "anvesha",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm --prefix client run dev\" \"npm --prefix server run dev\"",
+    "build": "npm --prefix client run build",
+    "server": "npm --prefix server run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
